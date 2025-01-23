@@ -1,8 +1,8 @@
 body{
-    background-color: rgb(174, 197, 205);
+    background-image: url(Pics/giphy.gif);
 }
 h1{
-    color: rgb(255, 0, 119);
+    color: rgb(238, 0, 255);
     text-align: center;
 }
 h2{
@@ -10,6 +10,11 @@ h2{
     text-align: center;
 }
 p{
-    color: rgb(73, 0, 128);
+    color: rgb(255, 0, 0);
     text-align: center;
+}
+.highlight{
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    border: 1px solid rgb(255, 0, 0);
 }
