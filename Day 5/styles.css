@@ -1,0 +1,42 @@
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    margin: 20px;
+    padding: 20px;
+    border: 10px solid black;
+}
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.flex-item {
+   width: 600px;
+   height: 250px;
+   background-color: red;
+   margin: 20px;
+   padding: 20px;
+   border: 10px solid black;
+}
+.flex-item:hover {
+   background-color: blue;
+} 
+h1{
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+h2{
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+p{
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-align: center;
+}
