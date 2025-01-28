@@ -21,19 +21,22 @@
    border: 10px solid black;
 }
 .flex-item:hover {
-   background-color: blue;
+   background-image: linear-gradient(red, yellow);
 } 
 h1{
     color: rgb(255, 255, 255);
     text-align: center;
+    text-shadow: 2px 2px 4px #000000;
 }
 h2{
     color: rgb(255, 255, 255);
     text-align: center;
+    text-shadow: 2px 2px 4px #000000;
 }
 p{
     color: rgb(255, 255, 255);
     text-align: center;
+    text-shadow: 2px 2px 4px #000000;
 }
 a{
     color: rgb(255, 255, 255);
