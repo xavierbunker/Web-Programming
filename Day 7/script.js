@@ -21,3 +21,31 @@ function randomColor() {
 button.addEventListener("click", function () {
   paragraph.style.color = randomColor();
 });
+
+//mouseover event
+button.addEventListener("mouseover", function () {
+  paragraph.style.backgroundColor = randomColor();
+});
+
+//Double click event
+button.addEventListener("dblclick", function () {
+  paragraph.style.backgroundColor = randomColor(); 
+});
+
+//Add a new paragraph
+
+addTextbutton.addEventListener("click", function () {
+  let newParagraph = document.createElement("p");
+  newParagraph.textContent = "This is a new paragraph";
+  newParagraph.style.color = randomColor();
+  extraTextContainer.appendChild(newParagraph);
+});
+
+// remove a paragraph
+
+removeTextButton.addEventListener("click", function () {
+  let paragraphs = extraTextContainer.getElementsByTagName("p");
+  if (paragraphs.length > 0) {
+    extraTextContainer.removeChild(paragraphs[paragraphs.length - 1]);
+  }
+});
