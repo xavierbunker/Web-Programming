@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <script>
+        function generateEmail(form) {
+            document.getElementById("email").innerHTML = 
+            form.element["first"].value + "." + form.element["last"].value + "@atu.edu";
+
+            form.reset();
+        }
+    </script>
+</head>
+<body>
+    <form>
+        First Name: <input type="text" id="first_name"><br>
+        Last Name: <input type="text" id="last_name"><br>
+
+        <input type="button" value="Generate Email" onclick="generateEmail(this.form);">
+
+        <p id="email">
+            
+        </p>
+    </form>
+</body>
+</html>
