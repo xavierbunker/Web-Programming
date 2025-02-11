@@ -9,6 +9,9 @@ let resultReverse = document.getElementById("resultReverse");
 let countVowelsButton = document.getElementById("countVowelsButton");
 let vowelString = document.getElementById("vowelString");
 let resultVowels = document.getElementById("resultVowels");
+let largestButton = document.getElementById("largestButton");
+let numbersInput = document.getElementById("numbers");
+let largestResult = document.getElementById("largestResult");
 
 // Function to generate random color
 function randomColor() {
@@ -53,3 +56,12 @@ countVowelsButton.addEventListener("click", function () {
     }
     resultVowels.innerText = "Number of vowels: " + count;
 });
+
+// Find the largest number in an array of numbers input by user
+largestButton.addEventListener("click", function () {
+  let numbers = numbersInput.value.split(",").map(Number);
+  let largestNumber = Math.max(...numbers);
+  largestResult.innerText = "The largest number is: " + largestNumber;
+});
+
+
