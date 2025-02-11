@@ -1,8 +1,10 @@
-body{
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
     margin: 0;
-    padding: 20px;
+    flex-direction: column; /* To stack elements vertically */
 }
 .container{
     max-width: 800px;
@@ -27,6 +29,8 @@ button{
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
+    display: block;
+    margin: auto;
 }
 button:hover{
     background-color: #218838;

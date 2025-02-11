@@ -2,44 +2,54 @@ let background = document.getElementById("background");
 let button = document.getElementById("colorButton");
 let number = document.getElementById("number");
 let checkButton = document.getElementById("checkButton");
-let result = document.getElementById("result");
+let resultEvenOdd = document.getElementById("resultEvenOdd");
+let reverseButton = document.getElementById("reverseButton");
+let stringInput = document.getElementById("stringInput");
+let resultReverse = document.getElementById("resultReverse");
+let countVowelsButton = document.getElementById("countVowelsButton");
+let vowelString = document.getElementById("vowelString");
+let resultVowels = document.getElementById("resultVowels");
 
-//fuction to generate random color
+// Function to generate random color
 function randomColor() {
-    let letters = "0123456789ABCDEF";
-    let color = "#";
-    for (let i = 0; i < 6; i++) {
+  let letters = "0123456789ABCDEF";
+  let color = "#";
+  for (let i = 0; i < 6; i++) {
       color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
   }
+  return color;
+}
 
-//Change Background color on button click
-
+// Change background color of the entire page on button click
 button.addEventListener("click", function () {
-    background.style.color = randomColor();
-  });
+  document.body.style.backgroundColor = randomColor();
+});
 
-//Find odd or even number that was input by user
-
+// Find odd or even number that was input by user
 checkButton.addEventListener("click", function () {
     let num = parseInt(number.value);
     if (num % 2 === 0) {
-      result.innerHTML = "The number is even.";
+        resultEvenOdd.innerHTML = "The number is even.";
     } else {
-        result.innerHTML = "The number is odd.";
+        resultEvenOdd.innerHTML = "The number is odd.";
     }
-    });
+});
 
-    //Count the vowel that a user eneters
+// Reverse the string input by user
+reverseButton.addEventListener("click", function () {
+    let str = stringInput.value;
+    let reversedStr = str.split("").reverse().join("");
+    resultReverse.innerHTML = "Reversed string: " + reversedStr;
+});
 
-    function countVowels() {
-        let text = document.getElementById("text").value;
-        let count = 0;
-        for (let i = 0; i < text.length; i++) {
-            if ("aeiou".includes(text[i].toLowerCase())) {
-                count++;
-            }
+// Count the vowels in the string input by user
+countVowelsButton.addEventListener("click", function () {
+    let text = vowelString.value;
+    let count = 0;
+    for (let i = 0; i < text.length; i++) {
+        if ("aeiou".includes(text[i].toLowerCase())) {
+            count++;
         }
-        document.getElementById("vowelCount").innerText = "Number of vowels: " + count;
     }
+    resultVowels.innerText = "Number of vowels: " + count;
+});
