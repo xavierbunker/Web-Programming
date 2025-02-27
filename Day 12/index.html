@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple JSON Example</title>
+    <script>
+        const jsonData = {
+            "name": "John Doe",
+            "age": 30,
+            "city": "New York",
+            "email": "john.doe@example.com",
+            "phone": "123-456-7890"
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('jsonDisplay').textContent = JSON.stringify(jsonData, null, 2);
+        });
+    </script>
+</head>
+<body>
+    <h1>Simple JSON Example</h1>
+    <pre id="jsonDisplay"></pre>
+</body>
+</html>
