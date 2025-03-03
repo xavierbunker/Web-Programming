@@ -15,6 +15,7 @@ export default function MoodTracker() {
             <button onClick={() => setMood("😴")} style={{margin: "5px",padding: "10px",background: "lightgrey"}}>Sleepy</button>
             <button onClick={() => setMood("🤔")} style={{margin: "5px",padding: "10px",background: "lightyellow"}}>Confused</button>
             <button onClick={() => setMood("🤩")} style={{margin: "5px",padding: "10px",background: "lightcyan"}}>Excited</button>
+            <button onClick={() => setMood("💕")} style={{margin: "5px",padding: "10px",background: "lightgreen"}}>Love</button>
         </div>
     )
 }
