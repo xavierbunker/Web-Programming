@@ -8,9 +8,9 @@ export default function MoodTracker() {
         "😂": {description: 'Very Happy',link:'',memory:'When I Got My Jeep'},
         "😒": {description: 'Unamused',link:'',memory:'When Getting On My Nerves'},
         "😢": {description: 'Sad',link:'https://youtu.be/9bFHsd3o1w0?si=auyizKCtYXUDiw14',memory:'When I lost Puggles'},
-        "😡": {description: 'Angry',link:'',memory:'Almost Getting Hit By A Car'},
-        "😴": {description: 'Sleepy',link:'',memory:'Everyday Since Turning 21'},
-        "🤔": {description: 'Confused',link:'',memory:'School Work'},
+        "😡": {description: 'Angry',link:'https://youtu.be/tw429JGL5zo?si=pnaX0cu8NvLcbk7Y',memory:'Almost Getting Hit By A Car'},
+        "😴": {description: 'Sleepy',link:'https://www.youtube.com/live/LFASWuckB1c?si=gN_LTVDoS4Z8Np0-',memory:'Everyday Since Turning 21'},
+        "🤔": {description: 'Confused',link:'https://youtu.be/n9FJkRk28bM?si=8gawKP1LhEYUpwRZ',memory:'School Work'},
         "🤩": {description: 'Excited',link:'',memory:'When I Got My Driver License'},
         "💕": {description: 'Love',link:'',memory:'People And Things Close To Me'}
     };
