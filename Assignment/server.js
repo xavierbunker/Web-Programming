@@ -19,7 +19,7 @@ const pool = new Pool({
 });
 
 //Get all projects
-app.get("/projects", async (req, res) => {
+app.get("/personal-information", async (req, res) => {
   try {
     const result = await pool.query("SELECT * FROM completed_projects");
     res.json(result.rows);
@@ -29,7 +29,34 @@ app.get("/projects", async (req, res) => {
   }
 });
 
-app.post("/projects", async (req, res) => {
+app.post("/personal-information", async (req, res) => {
+  try{
+    const {project_name, description, date_completed, technologies_used, project_url} = req.body;
+
+    //Insert data
+    const result = await pool.query(
+      "INSERT INTO completed_projects (project_name, description, date_completed, technologies_used, project_url) VALUES ($1, $2, $3, $4, $5) RETURNING *",
+      [project_name, description, date_completed, technologies_used, project_url]
+    );
+    res.status(201).json(result.rows[0]);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("Server error");
+  }
+});
+
+//Get all projects
+app.get("/hobbies", async (req, res) => {
+  try {
+    const result = await pool.query("SELECT * FROM completed_projects");
+    res.json(result.rows);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("Server error");
+  }
+});
+
+app.post("/hobbies", async (req, res) => {
   try{
     const {project_name, description, date_completed, technologies_used, project_url} = req.body;
 
