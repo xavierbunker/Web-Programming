@@ -1,62 +1,52 @@
-import { useState } from 'react'
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
-import axios from 'axios'
-import { useEffect } from 'react'
-import Contact from './Contact.jsx'
-import Home from './Home.jsx'
-import Projects from './Projects.jsx'
-import Education from './Education.jsx'
-import Skills from './Skills.jsx'
+import { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import axios from 'axios';
+import Contact from './Contact';
+import Home from './Home';
+import Projects from './Projects';
+import Education from './Education';
+import Skills from './Skills';
 
-//Nav Bar with Tailwind CSS
-
-function NavBar() {
-  return (
-    <nav className="bg-gray-800 p-4">
-      <ul className="flex space-x-4">
-        <li>
-          <Link to="/" className="text-black hover:text-gray-400">
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link to="/projects" className="text-black hover:text-gray-400">
-            Projects
-          </Link>
-        </li>
-        <li>
-          <Link to="/education" className="text-black hover:text-gray-400">
-            Education
-          </Link>
-        </li>
-        <li>
-          <Link to="/skills" className="text-black hover:text-gray-400">
-            Skills
-          </Link>
-        </li>
-        <li>
-          <Link to="/contact" className="text-black hover:text-gray-400">
-            Contact
-          </Link>
-        </li>
-      </ul>
-    </nav>
-  )
-}
-// Main App Component
-export default function App() {
+function App() {
   return (
     <Router>
-      <div className="container mx-auto p-4">
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/education" element={<Education />} />
-          <Route path="/skills" element={<Skills />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+      {/* Main container with background and font */}
+      <div className="bg-gray-100 font-sans min-h-screen">
+        {/* Navigation bar */}
+        <nav className="bg-blue-600 p-4 text-white shadow-md">
+          <div className="container mx-auto flex justify-between items-center">
+            {/* Logo/Your Name */}
+            <Link to="/" className="font-bold text-xl hover:text-blue-200 transition duration-300">Xavier Bunker</Link>
+            {/* Navigation links */}
+            <div className="space-x-4">
+              <Link to="/" className="hover:text-blue-200 transition duration-300">Home</Link>
+              <Link to="/projects" className="hover:text-blue-200 transition duration-300">Projects</Link>
+              <Link to="/education" className="hover:text-blue-200 transition duration-300">Education</Link>
+              <Link to="/skills" className="hover:text-blue-200 transition duration-300">Skills</Link>
+              <Link to="/contact" className="hover:text-blue-200 transition duration-300">Contact</Link>
+            </div>
+          </div>
+        </nav>
+
+        {/* Main content area */}
+        <main className="container mx-auto py-10">
+          {/* Routing for different pages */}
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/education" element={<Education />} />
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
+
+        {/* Footer */}
+        <footer className="bg-gray-200 py-6 text-center text-gray-600 mt-8 shadow-inner">
+          <p>&copy; 2025 Xavier Bunker. All rights reserved.</p>
+        </footer>
       </div>
     </Router>
-  )
+  );
 }
+
+export default App;
